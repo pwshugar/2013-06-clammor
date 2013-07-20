@@ -3,7 +3,7 @@ require 'spec_helper'
 describe User do
   # Simple validations.  Do these first
   it { should validate_presence_of(:name) }
-  it { should validate_uniqueness_of(:email) }
+  xit { should validate_uniqueness_of(:email) }
 
   # More complex validations
   it { should_not allow_value("badEmail").for(:email) }
@@ -27,6 +27,6 @@ describe User do
   it "should delete the user's status if a user is deleted" do
     # Implement a test that checks whether a User's status is deleted 
     # when a User is destroyed see post_spec.rb for inspiration. 
-    pending
+    pending 
   end 
 end
