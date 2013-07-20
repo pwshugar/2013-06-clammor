@@ -7,4 +7,11 @@ class CreateUsers < ActiveRecord::Migration
   end
 end
 
-
+class CreateUsers < ActiveRecord::Migration
+  def change
+    create_table :posts do |t|
+      t.string :user_email
+      t.string :post
+    end
+  end
+end

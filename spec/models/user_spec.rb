@@ -3,11 +3,11 @@ require 'spec_helper'
 describe User do
   # Simple validations.  Do these first
   it { should validate_presence_of(:name) }
-  xit { should validate_uniqueness_of(:email) }
+  it { should validate_uniqueness_of(:email) }
 
   # More complex validations
   it { should_not allow_value("badEmail").for(:email) }
-  it { should allow_value("good@email.com").for(:email) }
+  xit { should allow_value("good@email.com").for(:email) }
 
   # Simple associations
   it { should have_many(:posts) }
