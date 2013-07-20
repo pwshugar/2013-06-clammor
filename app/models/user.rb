@@ -12,8 +12,8 @@ class User < ActiveRecord::Base
   has_one :status
   has_many :subscriptions
   has_many :groups, :through => :subscriptions
-  validates :name, presence: true
-  validates :email, uniqueness: true
+  validates :name, :presence => true
+  validates :email, :uniqueness => true
   # validates :email, uniqueness: true, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create }
 
   # TODO implement association for User model. See user_spec.rb for specification.

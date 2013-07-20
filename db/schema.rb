@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 6) do
 
   create_table "comments", :force => true do |t|
     t.integer "user_id"
+    t.integer "post_id"
     t.string  "comment"
   end
 
@@ -24,12 +25,12 @@ ActiveRecord::Schema.define(:version => 6) do
 
   create_table "posts", :force => true do |t|
     t.integer "user_id"
-    t.string  "post"
+    t.string  "title"
+    t.string  "content"
   end
 
   create_table "statuses", :force => true do |t|
     t.integer "user_id"
-    t.string  "status"
   end
 
   create_table "subscriptions", :force => true do |t|
