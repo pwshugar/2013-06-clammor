@@ -11,14 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2) do
+ActiveRecord::Schema.define(:version => 6) do
 
-  create_table "posts", :force => true do |t|
-    t.string "user_email"
-    t.string "post"
+  create_table "comments", :force => true do |t|
+    t.integer "user_id"
+    t.string  "comment"
   end
 
-  create_table "users", :primary_key => "email", :force => true do |t|
+  create_table "groups", :force => true do |t|
+    t.string "group"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.integer "user_id"
+    t.string  "post"
+  end
+
+  create_table "statuses", :force => true do |t|
+    t.integer "user_id"
+    t.string  "status"
+  end
+
+  create_table "subscriptions", :force => true do |t|
+    t.integer "user_id"
+    t.integer "group_id"
+    t.string  "subscription"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string "email"
     t.string "name"
   end
 

@@ -6,7 +6,7 @@ describe User do
   it { should validate_uniqueness_of(:email) }
 
   # More complex validations
-  it { should_not allow_value("badEmail").for(:email) }
+  xit { should_not allow_value("badEmail").for(:email) }
   xit { should allow_value("good@email.com").for(:email) }
 
   # Simple associations
@@ -28,5 +28,6 @@ describe User do
     # Implement a test that checks whether a User's status is deleted 
     # when a User is destroyed see post_spec.rb for inspiration. 
     pending 
-  end 
-end
+  end  
+end  
+  
