@@ -9,10 +9,9 @@ describe Post do
   it { should belong_to(:user) }
   it { should have_many(:comments) }
 
-  xit "should destroy all associated comments when a Post is deleted" do
+  it "should destroy all associated comments when a Post is deleted" do
     post = Post.create({ :title => "Test", :content => "Testing the model" })
     3.times { post.comments << Comment.create({ :content => "Random comment" }) }
     expect { post.destroy }.to change { Comment.all.length }.from(3).to(0)
   end
 end
-     

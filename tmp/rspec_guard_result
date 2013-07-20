@@ -1,2 +1,6 @@
-./spec/models/comment_spec.rb:4
-./spec/models/comment_spec.rb:8
+./spec/models/group_spec.rb:5
+./spec/models/group_spec.rb:6
+./spec/models/group_spec.rb:9
+./spec/models/group_spec.rb:10
+./spec/models/subscription_spec.rb:5
+./spec/models/subscription_spec.rb:6

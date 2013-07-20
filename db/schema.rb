@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 6) do
   create_table "comments", :force => true do |t|
     t.integer "user_id"
     t.integer "post_id"
-    t.string  "comment"
+    t.string  "content"
   end
 
   create_table "groups", :force => true do |t|

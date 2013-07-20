@@ -5,5 +5,5 @@ describe Comment do
 
   # Simple associations
   it { should belong_to(:post) }
-  it { should belong_to(:user) }
+  it { should belong_to(:user) } 
 end
