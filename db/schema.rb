@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(:version => 6) do
   end
 
   create_table "groups", :force => true do |t|
-    t.string "group"
+    t.string "name"
+    t.string "motto"
   end
 
   create_table "posts", :force => true do |t|
