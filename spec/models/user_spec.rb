@@ -18,13 +18,13 @@ describe User do
   it { should have_many(:subscriptions) }
   it { should have_many(:groups).through(:subscriptions) }
 
-  xit "should create a default Status when a user is created" do
+  it "should create a default Status when a user is created" do
     user = User.create({ :name => "Jon Doe", :email => "test@alright.com" })
     user.status.should_not be_nil
     user.status.content.should == "I Just joined Clammor!"
   end
 
-  xit "should delete the user's status if a user is deleted" do
+  it "should delete the user's status if a user is deleted" do
     # Implement a test that checks whether a User's status is deleted 
     # when a User is destroyed see post_spec.rb for inspiration. 
     pending 

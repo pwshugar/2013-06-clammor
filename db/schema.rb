@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 6) do
 
   create_table "statuses", :force => true do |t|
     t.integer "user_id"
+    t.string  "status",  :default => "I Just joined Clammor!"
   end
 
   create_table "subscriptions", :force => true do |t|

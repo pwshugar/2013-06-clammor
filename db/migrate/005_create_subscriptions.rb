@@ -4,6 +4,7 @@ class CreateSubscriptions < ActiveRecord::Migration
       t.integer :user_id
       t.integer :group_id
       t.string :subscription
+      t.string :renew_date
     end
   end
 end

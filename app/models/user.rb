@@ -4,7 +4,7 @@
 #       record.errors[attribute] << (options[:message] || "is not an email")
 #     end
 #   end
-# end
+# end 
 
 class User < ActiveRecord::Base
   has_many :posts
@@ -13,9 +13,9 @@ class User < ActiveRecord::Base
   has_many :subscriptions
   has_many :groups, :through => :subscriptions
   validates :name, :presence => true
-  validates :email, :uniqueness => true
+  # validates :email, :uniqueness => true
   attr_accessible :name, :email
-  # validates :email, uniqueness: true, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create }
+  validates :email, :uniqueness => true, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create }
 
   # TODO implement association for User model. See user_spec.rb for specification.
   
